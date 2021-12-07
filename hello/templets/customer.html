@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block body  %}
+    <div class="container-fluid my-0 px-0">
+    <img src="https://source.unsplash.com/WLUHO9A_xik/1600x400" class="d-block w-100" alt="...">
+    </div>
+    <div class="container"style='background-color:gray'>
+    <h1 class='text-center' ><b>customer details here</b></h1>
+    <form method="post" action="/contect">
+    {% csrf_token %}
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">name</label>
+  <input type="text" class="form-control" id="name" name='name' placeholder="enter your name">
+</div>
+
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" name='email' placeholder="enter your email">
+</div>
+<div class="mb-3">
+  <label for="desc" class="desc">tell me why you want to contact me for</label>
+  <textarea class="form-control" id="desc" name ='desc' rows="3"></textarea>
+</div>
+<div class="mb-3">
+  <label for="phone" class="desc">phone number</label>
+  <input type="phone" class="phone" id="phone" name ='phone' placeholder="">
+  <button class="btn btn-success"  type="submit">submit</button>
+</div>
+    </div>
+    {% endblock body  %}
+    {% block title %}customer{% endblock title %}
+
+{% block customeractive %} active {% endblock customeractive %}

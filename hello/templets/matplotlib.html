@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block matplotlibactive %}active{% endblock matplotlibactive %}
+{% block body %}
+
+matplotlib
+    
+    {{df | safe}}
+  <hr>  
+  {{discribe | safe}}
+<hr>
+{{swimmer_info | safe}}
+<hr>
+{{student_info | safe}}
+<hr>
+<br>
+<br>
+{% if chart %}
+        <img src=data:image/png;base64,{{chart|safe}}
+    
+    {% endif %}
+{% endblock body %}
+
+
+

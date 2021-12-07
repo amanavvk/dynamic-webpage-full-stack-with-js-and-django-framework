@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block body %}
+
+
+{% for My_swimming_students in student_info %}
+
+<ul>
+<li>id: {{My_swimming_students.student_id}}</li>
+</ul>
+<ul>
+<li>name:{{My_swimming_students.student_name}}</li>
+</ul>
+<ul>
+<li>injterewst:{{My_swimming_students.student_interest}}</li>
+</ul>
+<ul>
+<li>favourite stroke:{{My_swimming_students.student_favourite_stroke}}</li>
+</ul>
+<ul>
+<li>quote swim:{{My_swimming_students.slug}}</li>
+</ul>
+
+
+
+{% endfor %}
+
+<b>{{student_info}}</b>
+<strong><h2>hello my swimming studentsa</h2></strong>
+<strong>{% lorem 1 b random %}</strong>
+{% endblock body %}

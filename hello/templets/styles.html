@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block body %}
+
+{% if chart %}
+        <img src=data:image/png;base64,{{chart|safe}}
+    
+    {% endif %}
+<hr>
+<h2>here are access records</h2>
+<div class="container">
+    {% if access_records %}
+    <table> 
+    <thead> 
+    <th>site name</th>
+    <th>dater accessed</th>
+    </thead>
+    
+
+    {% for acc in  access_records %}
+    <tr>
+    <td>{{acc.name}}</td>
+    <td>{{acc.date}}</td>
+    </tr>
+
+
+
+
+    {% endfor %}
+    </table>
+
+    
+    {% endif %}</div>
+
+{% endblock body %}
+
+
+
+
